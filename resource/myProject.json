@@ -1,0 +1,50 @@
+{
+    "package": "com.modogame",
+    "projName": "chuanqi_world",
+    "appName": "传奇世界",
+    "logLvl": {
+        "default": 1,
+        "net": 4,
+        "mo.R": 1
+    },
+    "renderMode": 0,
+    "showFPS": true,
+    "frameRate": 30,
+    "version": "0.0.1",
+    "channelId": 99999,
+    "httpHost": "127.0.0.1",
+    "httpPort": 5005,
+    "audioEnabled": false,
+    "guideEnabled": true,
+    "payCheckFrq":[2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 5, 10, 20, 30, 60, 600, 1800, 3610],
+    "hostCfg": {
+        "教练": {
+            "httpHost": "127.0.0.1",
+            "httpPort": 5005
+        },
+        "weibin": {
+            "httpHost": "127.0.0.1",
+            "httpPort": "5005"
+        },
+        "remote": {
+            "httpHost": "127.0.0.1",
+            "httpPort": "5005"
+        }
+    },
+    "resLimit": 100,
+    "unitModule": "HomeScene",
+    "unitArgs": {
+        "FightScene": {
+            "copyId": 1,
+            "matrixType": 1
+        },
+        "EmbattleScene": {
+            "copyId": 1,
+            "matrixType": 1
+        }
+    },
+    "cmd": [
+        "egret publish --method uglify -compile -log --runtime native -nozip",
+        "adb shell dumpsys meminfo $package_name"
+    ]
+}
